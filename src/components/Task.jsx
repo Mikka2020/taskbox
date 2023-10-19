@@ -22,7 +22,8 @@ export default function Task({
         />
         <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
       </label>
-      <label htmlFor="title" aria-label={title}>
+
+      <label htmlFor="title" aria-label={title} className="title">
         <input
           type="text"
           value={title}
@@ -50,7 +51,7 @@ export default function Task({
 Task.propTypes = {
   /** Composition of the task */
   task: PropTypes.shape({
-    /** Id of th task */
+    /** Id of the task */
     id: PropTypes.string.isRequired,
     /** Title of the task */
     title: PropTypes.string.isRequired,
